@@ -36,7 +36,7 @@ bool Application2D::startup()
 			int index = (y * GRIDSIZE) + x;
 
 			Vector2 pos(x * NODESIZE, y * NODESIZE);
-			m_ppGrid[index] = new GridNode(pos, x, y);
+			m_ppGrid[index] = new GridNode(pos, index, x, y);
 
 			if (x % 3 == 0 && y != 5)
 			{
@@ -94,7 +94,35 @@ bool Application2D::startup()
 			// Diagonal Nodes
 			for (int d = 0; d < 4; ++d)
 			{
+				int localX = x;
+				int localY = y;
 
+				if (d % 2 == 0)
+				{
+					localX += d - 1;
+					localY += d - 1;
+				}
+				else
+				{
+					localX += d - 2;
+					localY += d - 2;
+				}
+
+				if (localX < 0 || localX >= GRIDSIZE)
+					continue;
+
+				if (localY < 0 || localY >= GRIDSIZE)
+					continue;
+
+
+				int localIndex = (localY * GRIDSIZE) + localX;
+				GridNode* AdNode = m_ppGrid[localIndex];
+
+				AStarEdge* pEdge = new AStarEdge();
+				pEdge->m_pEndNode = AdNode;
+				pEdge->m_nCost = 14;
+
+				currentNode->AdjacentNode.pushBack(pEdge);
 			}
 
 

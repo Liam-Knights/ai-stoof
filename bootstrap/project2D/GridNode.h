@@ -5,7 +5,7 @@
 struct GridNode : public AStarNode
 {
 public:
-	GridNode(Vector2 pos, int nIndexX, int nIndexY)
+	GridNode(Vector2 pos,int index, int nIndexX, int nIndexY):AStarNode(index)
 	{
 		m_vectorPos = pos;
 		m_nIndexX = nIndexX;
