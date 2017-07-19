@@ -38,6 +38,10 @@ bool Application2D::startup()
 			Vector2 pos(x * NODESIZE, y * NODESIZE);
 			m_ppGrid[index] = new GridNode(pos, x, y);
 
+			if (x % 3 == 0 && y != 5)
+			{
+				m_ppGrid[index]->m_nBlocked = true;
+			}
 		}
 	}
 
@@ -150,6 +154,16 @@ void Application2D::draw()
 	{
 		float x = m_ppGrid[i]->m_vectorPos.x;
 		float y = m_ppGrid[i]->m_vectorPos.y;
+
+		if (m_ppGrid[i]->m_nBlocked)
+		{
+			m_2dRenderer->setRenderColour(0xf776a9ff);
+		}
+		else
+		{
+			m_2dRenderer->setRenderColour(0xef67ddff);
+		}
+
 		m_2dRenderer->drawBox(m_ppGrid[i]->m_vectorPos.x, m_ppGrid[i]->m_vectorPos.y, NODESIZE - 2, NODESIZE - 2);
 
 
