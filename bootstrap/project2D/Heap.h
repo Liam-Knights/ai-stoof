@@ -70,9 +70,11 @@ public:
 			{
 				break;
 			}
-			m_data.popBack();
-			return result;
+			
+			
 		}
+		m_data.popBack();
+		return result;
 	}
 
 	void clear()

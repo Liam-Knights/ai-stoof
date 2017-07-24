@@ -23,6 +23,8 @@ bool Application2D::startup()
 	_ASSERT(m_2dRenderer);
 	m_2dRenderer = new Renderer2D();
 
+	
+	m_DecisionTree = new DecisionTree;
 	resourceManag<Font>::create();
 
 	
@@ -105,7 +107,7 @@ bool Application2D::startup()
 				else
 				{
 					localX += d - 2;
-					localY += d - 2;
+					localY -= d - 2;
 				}
 
 				if (localX < 0 || localX >= GRIDSIZE)
@@ -128,6 +130,7 @@ bool Application2D::startup()
 
 		}
 	}
+	m_player = new Player(m_ppGrid);
 	return true;
 }
 
@@ -138,6 +141,8 @@ void Application2D::shutdown()
 		delete m_ppGrid[i];
 	}
 	delete m_2dRenderer;
+	delete m_DecisionTree;
+	delete m_player;
 }
 
 void Application2D::update(float deltaTime) 
@@ -159,6 +164,8 @@ void Application2D::update(float deltaTime)
 	if (input->isKeyDown(INPUT_KEY_RIGHT))
 		m_cameraX += 500.0f * deltaTime;
 
+	m_player->Update(deltaTime);
+	m_DecisionTree->Update(nullptr, deltaTime);
 	// exit the application
 	if (input->isKeyDown(INPUT_KEY_ESCAPE))
 		quit();
@@ -170,7 +177,7 @@ void Application2D::draw()
 	clearScreen();
 
 	// set the camera position before we begin rendering
-	m_2dRenderer->setCameraPos(100 , 400);
+	m_2dRenderer->setCameraPos(-400 , -100);
 
 	// begin drawing sprites
 	m_2dRenderer->begin();
@@ -185,7 +192,7 @@ void Application2D::draw()
 
 		if (m_ppGrid[i]->m_nBlocked)
 		{
-			m_2dRenderer->setRenderColour(0xf776a9ff);
+			m_2dRenderer->setRenderColour(0xAAAAAAAA);
 		}
 		else
 		{
@@ -206,7 +213,7 @@ void Application2D::draw()
 			m_2dRenderer->setRenderColour(0xFFFFFFFF);
 		}
 	}
-
+	m_player->Draw(m_2dRenderer);
 
 
 	// done drawing sprites

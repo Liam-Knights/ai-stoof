@@ -122,7 +122,7 @@ public:
 	//clears the entire array
 	void clear()
 	{
-		delete data;
+		//delete data;
 		m_nUsed = 0;
 	}
 

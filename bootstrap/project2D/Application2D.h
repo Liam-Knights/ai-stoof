@@ -5,7 +5,10 @@
 #include "Audio.h"
 #include "StateMachine.h"
 #include "GridNode.h"
+#include "DecisionTree.h"
+#include "player.h"
 
+class DecisionTree;
 class Application2D : public aie::Application {
 public:
 
@@ -25,6 +28,8 @@ protected:
 	aie::Font*			m_font;
 	aie::Audio*			m_audio;
 
+	Player*				m_player;
+	DecisionTree*		m_DecisionTree;
 	GridNode**			m_ppGrid;
 
 	float m_cameraX, m_cameraY;

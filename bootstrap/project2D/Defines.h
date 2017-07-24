@@ -1,4 +1,4 @@
 #pragma once
 
 #define GRIDSIZE 10
-#define NODESIZE 100.0f
+#define NODESIZE 50.0f

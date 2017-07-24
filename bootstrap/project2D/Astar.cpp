@@ -50,55 +50,57 @@ bool Astar::CalcPath(AStarNode* pStart, AStarNode* pEnd, dynamArray<AStarNode*>*
 				FinPath->pushFront(pNode);
 				pNode = pNode->m_prev;
 				//Return that we found a valid path.
-				return true;
+				
 			}
+			return true;
+		}
 			
-			//Loop through all of currentNode's neighbours
-			for (int i = 0; i < currentNode->AdjacentNode.Size(); ++i)
+		//Loop through all of currentNode's neighbours
+		for (int i = 0; i < currentNode->AdjacentNode.Size(); ++i)
+		{
+			AStarNode* m_pNeibours;
+			m_pNeibours = currentNode->AdjacentNode[i]->m_pEndNode;
+
+			if (m_pNeibours->m_nBlocked)
+				continue;
+
+			//Skip neighbours that are already in the closed list.
+			if (m_ClosedNode[m_pNeibours->m_nIndex] == true)
 			{
-				AStarNode* m_pNeibours;
-				m_pNeibours = currentNode->AdjacentNode[i]->m_pEndNode;
-				//Skip neighbours that are already in the closed list.
-				if (m_ClosedNode[m_pNeibours->m_nIndex] == true)
-				{
-					continue;
-				}
-				int nCost = currentNode->AdjacentNode[i]->m_nCost;
-				//if neighbour is already in open list...
-				if (m_OpenNode.contains(m_pNeibours))
-				{
+				continue;
+			}
+			int nCost = currentNode->AdjacentNode[i]->m_nCost;
+			//if neighbour is already in open list...
+			if (m_OpenNode.contains(m_pNeibours))
+			{
 					
-					//Check if this current path is better than old path (lower F Score).
-					if (currentNode->m_nFscore + nCost < m_pNeibours->m_nFscore)
-					{	
-						//Update G Score.
-						m_pNeibours->m_nGScore = currentNode->m_nGScore + nCost;
-						//Update F Score.
-						m_pNeibours->m_nFscore = m_pNeibours->m_nHScore + m_pNeibours->m_nGScore;
-						//Update Prev node pointer.
-						m_pNeibours->m_prev = currentNode;
-					}
-				}
-				//else (neighbour not in open list)
-				else
-				{
-					//Calculate G Score.
+				//Check if this current path is better than old path (lower F Score).
+				if (currentNode->m_nFscore + nCost < m_pNeibours->m_nFscore)
+				{	
+					//Update G Score.
 					m_pNeibours->m_nGScore = currentNode->m_nGScore + nCost;
-					//Calculate H Score.
-					m_pNeibours->m_nHScore = calcHeuristic(m_pNeibours, pEnd);
-					//Calculate F Score.
-					m_pNeibours->m_nFscore = m_pNeibours->m_nGScore + m_pNeibours->m_nHScore;
-					//Set Prev node pointer.
+					//Update F Score.
+					m_pNeibours->m_nFscore = m_pNeibours->m_nHScore + m_pNeibours->m_nGScore;
+					//Update Prev node pointer.
 					m_pNeibours->m_prev = currentNode;
-					//Add neighbour to open list.
-					m_OpenNode.push(m_pNeibours);
 				}
 			}
-			
+			//else (neighbour not in open list)
+			else
+			{
+				//Calculate G Score.
+				m_pNeibours->m_nGScore = currentNode->m_nGScore + nCost;
+				//Calculate H Score.
+				m_pNeibours->m_nHScore = calcHeuristic(m_pNeibours, pEnd);
+				//Calculate F Score.
+				m_pNeibours->m_nFscore = m_pNeibours->m_nGScore + m_pNeibours->m_nHScore;
+				//Set Prev node pointer.
+				m_pNeibours->m_prev = currentNode;
+				//Add neighbour to open list.
+				m_OpenNode.push(m_pNeibours);
+			}
 		}
 	}
-
-
 
 	//No path found if we got to here, so return false.
 	return false;
