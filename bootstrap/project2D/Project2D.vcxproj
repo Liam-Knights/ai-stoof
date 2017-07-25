@@ -91,6 +91,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="AiBehhaviour.cpp" />
     <ClCompile Include="Application2D.cpp" />
     <ClCompile Include="Astar.cpp" />
     <ClCompile Include="DecisionButtonPressed.cpp" />
@@ -105,9 +106,12 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="A-StarStruct.h" />
+    <ClInclude Include="AiBehhaviour.h" />
     <ClInclude Include="Application2D.h" />
     <ClInclude Include="Astar.h" />
     <ClInclude Include="BaseDecision.h" />
+    <ClInclude Include="BehaveNode.h" />
+    <ClInclude Include="CompositeNode.h" />
     <ClInclude Include="DecisionButtonPressed.h" />
     <ClInclude Include="DecisionNothingPressed.h" />
     <ClInclude Include="DecisionPrint.h" />
@@ -116,6 +120,8 @@
     <ClInclude Include="Defines.h" />
     <ClInclude Include="dyna.h" />
     <ClInclude Include="entity.h" />
+    <ClInclude Include="ExampleAction.h" />
+    <ClInclude Include="ExampleQuestion.h" />
     <ClInclude Include="GridNode.h" />
     <ClInclude Include="Heap.h" />
     <ClInclude Include="LinkedList.h" />
@@ -123,6 +129,8 @@
     <ClInclude Include="Player.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="resourceManag.h" />
+    <ClInclude Include="Selecter].h" />
+    <ClInclude Include="Sequence.h" />
     <ClInclude Include="stack.h" />
     <ClInclude Include="State.h" />
     <ClInclude Include="stateMachine.h" />

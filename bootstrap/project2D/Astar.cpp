@@ -83,6 +83,9 @@ bool Astar::CalcPath(AStarNode* pStart, AStarNode* pEnd, dynamArray<AStarNode*>*
 					m_pNeibours->m_nFscore = m_pNeibours->m_nHScore + m_pNeibours->m_nGScore;
 					//Update Prev node pointer.
 					m_pNeibours->m_prev = currentNode;
+
+					//set heap
+
 				}
 			}
 			//else (neighbour not in open list)
