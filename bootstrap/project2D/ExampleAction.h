@@ -5,6 +5,7 @@
 class ExampleAction : public BehaveNode
 {
 public:
+
 	ExampleAction(char* text)
 	{
 		m_sText = text;

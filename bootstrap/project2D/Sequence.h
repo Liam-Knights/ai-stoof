@@ -3,9 +3,9 @@
 
 class Sequence : public ComppositeNode
 {
-	BehaveiourResult execute()
+	BehaveiourResult Execute()
 	{
-		for (unsigned int i = 0; children.Size(); ++i)
+		for (unsigned int i = 0; i < children.Size(); ++i)
 		{
 			if (children[i]->Execute() == EBHAVIOUR_FAILURE)
 			{

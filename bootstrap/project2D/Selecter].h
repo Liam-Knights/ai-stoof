@@ -3,15 +3,44 @@
 
 class Selecter : public ComppositeNode
 {
-	BehaveiourResult execute()
+	BehaveiourResult Execute()
 	{
-		for (unsigned int i = 0; children.Size(); ++i)
+
+
+
+
+		BehaveNode* child = m_PendingNode;
+
+		unsigned int i = -1;
+		if (!child)
 		{
-			if (children[i]->Execute() == EBEHAVIOUR_SUCCESS)
+			i = 0;
+		}
+
+
+		for (; i < children.Size(); ++i)
+		{
+
+			if (i >= 0)
 			{
+				child = children[i];
+			}
+			BehaveiourResult result = child->Execute();
+			
+			if (result == EBEHAVIOUR_SUCCESS)
+			{
+				m_PendingNode = nullptr;
 				return EBEHAVIOUR_SUCCESS;
 			}
+
+			if (result == EBEHAVIOUR_PENDING)
+			{
+				m_PendingNode = child;
+				return EBEHAVIOUR_PENDING;
+			}
 		}
+
+		m_PendingNode = nullptr;
 		return EBHAVIOUR_FAILURE;
 	}
 };

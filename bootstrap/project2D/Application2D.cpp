@@ -25,6 +25,7 @@ bool Application2D::startup()
 
 	
 	m_DecisionTree = new DecisionTree;
+	m_Behave = new AiBehhaviour;
 	resourceManag<Font>::create();
 
 	
@@ -166,6 +167,7 @@ void Application2D::update(float deltaTime)
 
 	m_player->Update(deltaTime);
 	m_DecisionTree->Update(nullptr, deltaTime);
+	m_Behave->Update(deltaTime);
 	// exit the application
 	if (input->isKeyDown(INPUT_KEY_ESCAPE))
 		quit();

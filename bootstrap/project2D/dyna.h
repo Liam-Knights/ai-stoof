@@ -21,7 +21,7 @@ public:
 		}
 
 
-		_ASSERT(data);
+
 		data = new t[cap];
 		m_nCapacity = cap;
 		m_nUsed = 0;

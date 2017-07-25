@@ -7,6 +7,8 @@
 #include "GridNode.h"
 #include "DecisionTree.h"
 #include "player.h"
+#include "BehaveNode.h"
+#include "AiBehhaviour.h"
 
 class DecisionTree;
 class Application2D : public aie::Application {
@@ -28,6 +30,7 @@ protected:
 	aie::Font*			m_font;
 	aie::Audio*			m_audio;
 
+	AiBehhaviour*			m_Behave;
 	Player*				m_player;
 	DecisionTree*		m_DecisionTree;
 	GridNode**			m_ppGrid;

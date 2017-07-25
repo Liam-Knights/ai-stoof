@@ -3,7 +3,7 @@
 #include "Input.h"
 
 using namespace aie;
-class ExampleAction : public BehaveNode
+class ExampleQuestion : public BehaveNode
 {
 public:
 	BehaveiourResult Execute()
