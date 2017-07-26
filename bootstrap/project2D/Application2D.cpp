@@ -7,6 +7,7 @@
 #include "GridNode.h"
 #include "Defines.h"
 #include <crtdbg.h>
+#include "AU.h"
 
 using namespace aie;
 
@@ -20,17 +21,20 @@ Application2D::~Application2D()
 
 bool Application2D::startup() 
 {
-	_ASSERT(m_2dRenderer);
-	m_2dRenderer = new Renderer2D();
 
-	
+	m_2dRenderer = new Renderer2D();
+	_ASSERT(m_2dRenderer);
+
 	m_DecisionTree = new DecisionTree;
 	m_Behave = new AiBehhaviour;
+
+	m_Ai = new AI;
+
 	resourceManag<Font>::create();
 
-	
-	_ASSERT(m_ppGrid);
+
 	m_ppGrid = new GridNode*[GRIDSIZE * GRIDSIZE];
+	_ASSERT(m_ppGrid);
 
 	for (int x = 0; x < GRIDSIZE; ++x)
 	{
@@ -144,6 +148,7 @@ void Application2D::shutdown()
 	delete m_2dRenderer;
 	delete m_DecisionTree;
 	delete m_player;
+	delete m_Ai;
 }
 
 void Application2D::update(float deltaTime) 
@@ -166,6 +171,7 @@ void Application2D::update(float deltaTime)
 		m_cameraX += 500.0f * deltaTime;
 
 	m_player->Update(deltaTime);
+	m_Ai->Update(deltaTime);
 	m_DecisionTree->Update(nullptr, deltaTime);
 	m_Behave->Update(deltaTime);
 	// exit the application
@@ -179,7 +185,7 @@ void Application2D::draw()
 	clearScreen();
 
 	// set the camera position before we begin rendering
-	m_2dRenderer->setCameraPos(-400 , -100);
+	//m_2dRenderer->setCameraPos(-400 , -100);
 
 	// begin drawing sprites
 	m_2dRenderer->begin();
@@ -216,7 +222,7 @@ void Application2D::draw()
 		}
 	}
 	m_player->Draw(m_2dRenderer);
-
+	m_Ai->Draw(m_2dRenderer);
 
 	// done drawing sprites
 	m_2dRenderer->end();

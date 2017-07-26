@@ -14,7 +14,7 @@ public:
 	~StateMachine();
 
 	//returns if there are is 0 states
-	void Update(float deltaTime);
+	void Update(float deltaTime, Agent* pAgent);
 
 	//returns id there are 0 states
 	//calls draw if onoff is true

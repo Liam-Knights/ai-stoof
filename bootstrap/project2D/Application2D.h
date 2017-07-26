@@ -9,8 +9,10 @@
 #include "player.h"
 #include "BehaveNode.h"
 #include "AiBehhaviour.h"
+#include "AU.h"
 
 class DecisionTree;
+class AU;
 class Application2D : public aie::Application {
 public:
 
@@ -34,6 +36,8 @@ protected:
 	Player*				m_player;
 	DecisionTree*		m_DecisionTree;
 	GridNode**			m_ppGrid;
+	AI*					m_Ai;
+
 
 	float m_cameraX, m_cameraY;
 	float m_timer;

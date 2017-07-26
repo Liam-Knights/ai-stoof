@@ -94,21 +94,27 @@
     <ClCompile Include="AiBehhaviour.cpp" />
     <ClCompile Include="Application2D.cpp" />
     <ClCompile Include="Astar.cpp" />
+    <ClCompile Include="AU.cpp" />
     <ClCompile Include="DecisionButtonPressed.cpp" />
     <ClCompile Include="DecisionNothingPressed.cpp" />
     <ClCompile Include="DecisionPrint.cpp" />
     <ClCompile Include="DecisionTree.cpp" />
     <ClCompile Include="entity.cpp" />
+    <ClCompile Include="flee.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Player.cpp" />
+    <ClCompile Include="seek.cpp" />
     <ClCompile Include="State.cpp" />
     <ClCompile Include="stateMachine.cpp" />
+    <ClCompile Include="StateMove.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="A-StarStruct.h" />
+    <ClInclude Include="Agent.h" />
     <ClInclude Include="AiBehhaviour.h" />
     <ClInclude Include="Application2D.h" />
     <ClInclude Include="Astar.h" />
+    <ClInclude Include="AU.h" />
     <ClInclude Include="BaseDecision.h" />
     <ClInclude Include="BehaveNode.h" />
     <ClInclude Include="CompositeNode.h" />
@@ -122,18 +128,22 @@
     <ClInclude Include="entity.h" />
     <ClInclude Include="ExampleAction.h" />
     <ClInclude Include="ExampleQuestion.h" />
+    <ClInclude Include="flee.h" />
     <ClInclude Include="GridNode.h" />
     <ClInclude Include="Heap.h" />
+    <ClInclude Include="IBehaviour.h" />
     <ClInclude Include="LinkedList.h" />
     <ClInclude Include="listNode.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="resourceManag.h" />
+    <ClInclude Include="seek.h" />
     <ClInclude Include="Selecter].h" />
     <ClInclude Include="Sequence.h" />
     <ClInclude Include="stack.h" />
     <ClInclude Include="State.h" />
     <ClInclude Include="stateMachine.h" />
+    <ClInclude Include="StateMove.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

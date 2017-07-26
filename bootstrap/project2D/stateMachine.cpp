@@ -22,14 +22,14 @@ StateMachine::~StateMachine()
 	}
 }
 
-void StateMachine::Update(float deltaTime)
+void StateMachine::Update(float deltaTime, Agent* pAgent)
 {
 	//returns if the state is less or equal to 0
 	if (m_CurrentStack.size() <= 0)
 		return;
 	
 	//updates the state on the stack
-	m_CurrentStack.top()->OnUpdate(deltaTime, this);
+	m_CurrentStack.top()->OnUpdate(deltaTime, this, pAgent);
 
 }
 
