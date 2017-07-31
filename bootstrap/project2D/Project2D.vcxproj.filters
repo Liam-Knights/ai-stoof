@@ -63,6 +63,9 @@
     <ClCompile Include="StateMove.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="player2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Application2D.h">
@@ -168,6 +171,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="StateMove.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="player2.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

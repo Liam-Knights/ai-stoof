@@ -103,6 +103,7 @@
     <ClCompile Include="flee.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Player.cpp" />
+    <ClCompile Include="player2.cpp" />
     <ClCompile Include="seek.cpp" />
     <ClCompile Include="State.cpp" />
     <ClCompile Include="stateMachine.cpp" />
@@ -135,6 +136,7 @@
     <ClInclude Include="LinkedList.h" />
     <ClInclude Include="listNode.h" />
     <ClInclude Include="Player.h" />
+    <ClInclude Include="player2.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="resourceManag.h" />
     <ClInclude Include="seek.h" />

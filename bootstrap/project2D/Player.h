@@ -16,6 +16,7 @@ public:
 	void Draw(Renderer2D* m_pRender);
 
 private:
+
 	Vector2 vector2p;
 	Astar* m_pAstar;
 	dynamArray<AStarNode*> m_Path;

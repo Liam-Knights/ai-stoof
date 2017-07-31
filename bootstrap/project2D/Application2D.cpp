@@ -136,6 +136,7 @@ bool Application2D::startup()
 		}
 	}
 	m_player = new Player(m_ppGrid);
+	m_player2 = new player2(m_ppGrid);
 	return true;
 }
 
@@ -148,6 +149,7 @@ void Application2D::shutdown()
 	delete m_2dRenderer;
 	delete m_DecisionTree;
 	delete m_player;
+	delete m_player2;
 	delete m_Ai;
 }
 
@@ -171,6 +173,7 @@ void Application2D::update(float deltaTime)
 		m_cameraX += 500.0f * deltaTime;
 
 	m_player->Update(deltaTime);
+	m_player2->Update(deltaTime);
 	m_Ai->Update(deltaTime);
 	m_DecisionTree->Update(nullptr, deltaTime);
 	m_Behave->Update(deltaTime);
@@ -222,6 +225,7 @@ void Application2D::draw()
 		}
 	}
 	m_player->Draw(m_2dRenderer);
+	m_player2->Draw(m_2dRenderer);
 	m_Ai->Draw(m_2dRenderer);
 
 	// done drawing sprites

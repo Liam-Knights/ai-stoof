@@ -7,6 +7,7 @@
 #include "GridNode.h"
 #include "DecisionTree.h"
 #include "player.h"
+#include "player2.h"
 #include "BehaveNode.h"
 #include "AiBehhaviour.h"
 #include "AU.h"
@@ -34,6 +35,7 @@ protected:
 
 	AiBehhaviour*			m_Behave;
 	Player*				m_player;
+	player2*			m_player2;
 	DecisionTree*		m_DecisionTree;
 	GridNode**			m_ppGrid;
 	AI*					m_Ai;
