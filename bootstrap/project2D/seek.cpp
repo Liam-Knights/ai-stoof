@@ -25,6 +25,7 @@ Vector2 seek::calculate(Agent* pAgent, float fDeltaTime)
 
 	v2Dir.normalise();
 
+	Vector2 v2Veloc = v2Dir * 100.0f * fDeltaTime;
 
-	return v2Dir * 100.0f * fDeltaTime;
+	return v2Veloc;
 }

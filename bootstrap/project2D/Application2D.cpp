@@ -29,6 +29,8 @@ bool Application2D::startup()
 	m_Behave = new AiBehhaviour;
 
 	m_Ai = new AI;
+	m_Ai2 = new AI2;
+	m_Ai2->setTarget(m_Ai);
 
 	resourceManag<Font>::create();
 
@@ -151,6 +153,7 @@ void Application2D::shutdown()
 	delete m_player;
 	delete m_player2;
 	delete m_Ai;
+	delete m_Ai2;
 }
 
 void Application2D::update(float deltaTime) 
@@ -175,6 +178,7 @@ void Application2D::update(float deltaTime)
 	m_player->Update(deltaTime);
 	m_player2->Update(deltaTime);
 	m_Ai->Update(deltaTime);
+	m_Ai2->Update(deltaTime);
 	m_DecisionTree->Update(nullptr, deltaTime);
 	m_Behave->Update(deltaTime);
 	// exit the application
@@ -227,6 +231,7 @@ void Application2D::draw()
 	m_player->Draw(m_2dRenderer);
 	m_player2->Draw(m_2dRenderer);
 	m_Ai->Draw(m_2dRenderer);
+	m_Ai2->Draw(m_2dRenderer);
 
 	// done drawing sprites
 	m_2dRenderer->end();

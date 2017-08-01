@@ -27,5 +27,5 @@ void AI::Draw(Renderer2D* Render)
 	Render->setRenderColour(0xAA00FFFF);
 	Render->drawCircle(m_v2Pos.x, m_v2Pos.y, 20.0f);
 	Render->setRenderColour(0xAA00FFFF);
-
+	
 }
