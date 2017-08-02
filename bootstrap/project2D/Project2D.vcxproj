@@ -92,6 +92,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="AI2.cpp" />
+    <ClCompile Include="AI3.cpp" />
     <ClCompile Include="AiBehhaviour.cpp" />
     <ClCompile Include="Application2D.cpp" />
     <ClCompile Include="Astar.cpp" />
@@ -111,11 +112,14 @@
     <ClCompile Include="stateMachine.cpp" />
     <ClCompile Include="StateMove.cpp" />
     <ClCompile Include="StatePursue.cpp" />
+    <ClCompile Include="StateWonder.cpp" />
+    <ClCompile Include="Wonder.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="A-StarStruct.h" />
     <ClInclude Include="Agent.h" />
     <ClInclude Include="AI2.h" />
+    <ClInclude Include="AI3.h" />
     <ClInclude Include="AiBehhaviour.h" />
     <ClInclude Include="Application2D.h" />
     <ClInclude Include="Astar.h" />
@@ -143,6 +147,7 @@
     <ClInclude Include="player2.h" />
     <ClInclude Include="Pursue.h" />
     <ClInclude Include="resource.h" />
+    <ClInclude Include="resource1.h" />
     <ClInclude Include="resourceManag.h" />
     <ClInclude Include="seek.h" />
     <ClInclude Include="Selecter].h" />
@@ -152,6 +157,11 @@
     <ClInclude Include="stateMachine.h" />
     <ClInclude Include="StateMove.h" />
     <ClInclude Include="StatePursue.h" />
+    <ClInclude Include="StateWonder.h" />
+    <ClInclude Include="Wonder.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Project2D.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

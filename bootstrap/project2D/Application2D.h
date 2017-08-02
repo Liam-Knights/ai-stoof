@@ -12,6 +12,7 @@
 #include "AiBehhaviour.h"
 #include "AU.h"
 #include "AI2.h"
+#include "AI3.h"
 
 class DecisionTree;
 class AU;
@@ -40,7 +41,8 @@ protected:
 	DecisionTree*		m_DecisionTree;
 	GridNode**			m_ppGrid;
 	AI*					m_Ai;
-	AI2*					m_Ai2;
+	AI2*				m_Ai2;
+	AI3*				m_Ai3;
 
 
 	float m_cameraX, m_cameraY;

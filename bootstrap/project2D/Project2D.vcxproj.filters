@@ -75,6 +75,15 @@
     <ClCompile Include="StatePursue.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="AI3.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="StateWonder.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Wonder.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Application2D.h">
@@ -194,5 +203,22 @@
     <ClInclude Include="StatePursue.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="resource1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AI3.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="StateWonder.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Wonder.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Project2D.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
   </ItemGroup>
 </Project>
