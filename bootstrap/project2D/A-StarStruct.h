@@ -3,6 +3,10 @@
 
 struct AStarNode;
 
+/*
+	astar edge struct
+	creates variables for astar
+*/
 struct AStarEdge
 {
 	AStarNode* m_pEndNode;
@@ -10,6 +14,14 @@ struct AStarEdge
 	int m_nCost;
 };
 
+/*
+	astar node struct
+	sets the g score
+	sets the f score
+	sets the h score
+	sets the index and the blocked squares
+	variable used in astar
+*/
 struct AStarNode
 {
 	AStarNode(int index)

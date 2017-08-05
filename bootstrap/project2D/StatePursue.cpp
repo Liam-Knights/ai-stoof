@@ -3,7 +3,11 @@
 #include "Agent.h"
 
 
-
+/*
+	state purse constructor
+	sets m_pursue to a new Pursue
+	pushes the the new pursue
+*/
 StatePursue::StatePursue()
 {
 
@@ -13,7 +17,10 @@ StatePursue::StatePursue()
 
 }
 
-
+/*
+	destructor
+	for loop that deletes the new pursue made in the constructor
+*/
 StatePursue::~StatePursue()
 {
 	for (unsigned int i = 0; i < m_pBehaviourList.Size(); ++i)
@@ -28,7 +35,11 @@ void StatePursue::OnEnter(StateMachine* pMachine)
 
 }
 
-//on update
+/*
+	on update function
+	this decides both the speed and velocity
+	it then sets the position of the pursueing agent
+*/
 void StatePursue::OnUpdate(float fDeltaTime, StateMachine* pMachine, Agent* pAgent)
 
 {
@@ -63,6 +74,10 @@ void StatePursue::OnExit(StateMachine* pMachine)
 
 }
 
+/*
+	set target function
+	sets m_pPurse as the target Agent
+*/
 void StatePursue::setTarget(Agent* Target)
 {
 	m_pPursue->setTarget(Target);

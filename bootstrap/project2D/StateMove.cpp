@@ -3,14 +3,21 @@
 #include "flee.h"
 #include "Agent.h"
 
-
+/*
+	state purse constructor
+	pushes both the seek and flee behaviours
+	and sets the weighting for seek to be stronger then the one for flee
+*/
 StateMove::StateMove()
 {
 	m_pBehaviourList.pushBack(new seek(0.75f));
 	m_pBehaviourList.pushBack(new flee(0.20f));
 }
 
-
+/*
+	destructor
+	for loop that deletes the new pursue made in the constructor
+*/
 StateMove::~StateMove()
 {
 	for (unsigned int i = 0; i < m_pBehaviourList.Size(); ++i)
@@ -25,7 +32,11 @@ void StateMove::OnEnter(StateMachine* pMachine)
 
 }
 
-//on update
+/*
+on update function
+this decides both the speed and velocity
+it then sets the position of the seek and flee agent which is the same agent
+*/
 void StateMove::OnUpdate(float fDeltaTime, StateMachine* pMachine, Agent* pAgent)
 
 {

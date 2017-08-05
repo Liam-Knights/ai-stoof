@@ -2,16 +2,28 @@
 #include "Agent.h"
 
 
-
+/*
+	constructor for flee class
+	basically here for fWeighting
+*/
 flee::flee(float fWeighting) : IBehaviour(fWeighting)
 {
 }
 
-
+/*
+	destructor
+	defualt
+*/
 flee::~flee()
 {
 }
 
+/*
+	calculate for flee
+	getts the position 200, 200
+	calculates the direction to not go near it
+	then returns the calculation for velocity
+*/
 Vector2 flee::calculate(Agent* pAgent, float fDeltaTime)
 {
 	

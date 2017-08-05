@@ -1,2 +1,80 @@
-﻿  AI3.cpp
-  Project2D.vcxproj -> C:\Users\s171162\Desktop\ai stoof\bootstrap\temp\Project2D\Debug\Project2D.exe
+﻿Build started 05/08/17 9:29:23 PM.
+     1>Project "C:\Users\liam\Desktop\ai_Stoof\bootstrap\Project2D\Project2D.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /IC:\Users\liam\Desktop\ai_Stoof\bootstrap\Project2D\includes /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"C:\Users\liam\Desktop\ai_Stoof\bootstrap\temp\Project2D\Debug\\" /Fd"C:\Users\liam\Desktop\ai_Stoof\bootstrap\temp\Project2D\Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt AI2.cpp AI3.cpp AiBehhaviour.cpp Application2D.cpp Astar.cpp AU.cpp DecisionButtonPressed.cpp DecisionNothingPressed.cpp DecisionPrint.cpp DecisionTree.cpp entity.cpp flee.cpp main.cpp Player.cpp player2.cpp Pursue.cpp seek.cpp State.cpp stateMachine.cpp StateMove.cpp StatePursue.cpp StateWonder.cpp Wonder.cpp
+         Wonder.cpp
+     1>c:\users\liam\desktop\ai_stoof\bootstrap\project2d\wonder.cpp(64): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+     1>c:\users\liam\desktop\ai_stoof\bootstrap\project2d\wonder.cpp(66): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+     1>c:\users\liam\desktop\ai_stoof\bootstrap\project2d\wonder.cpp(67): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+         StateWonder.cpp
+     1>c:\users\liam\desktop\ai_stoof\bootstrap\project2d\statewonder.cpp(21): warning C4018: '<': signed/unsigned mismatch
+     1>c:\users\liam\desktop\ai_stoof\bootstrap\project2d\statewonder.cpp(43): warning C4018: '<': signed/unsigned mismatch
+         StatePursue.cpp
+     1>c:\users\liam\desktop\ai_stoof\bootstrap\project2d\statepursue.cpp(26): warning C4018: '<': signed/unsigned mismatch
+     1>c:\users\liam\desktop\ai_stoof\bootstrap\project2d\statepursue.cpp(47): warning C4018: '<': signed/unsigned mismatch
+         StateMove.cpp
+     1>c:\users\liam\desktop\ai_stoof\bootstrap\project2d\statemove.cpp(23): warning C4018: '<': signed/unsigned mismatch
+     1>c:\users\liam\desktop\ai_stoof\bootstrap\project2d\statemove.cpp(44): warning C4018: '<': signed/unsigned mismatch
+         stateMachine.cpp
+         State.cpp
+         seek.cpp
+     1>c:\users\liam\desktop\ai_stoof\bootstrap\project2d\seek.cpp(34): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+         Pursue.cpp
+         player2.cpp
+     1>c:\users\liam\desktop\ai_stoof\bootstrap\project2d\player2.cpp(82): warning C4018: '<': signed/unsigned mismatch
+         Player.cpp
+     1>c:\users\liam\desktop\ai_stoof\bootstrap\project2d\player.cpp(83): warning C4018: '<': signed/unsigned mismatch
+         main.cpp
+         flee.cpp
+         entity.cpp
+         DecisionTree.cpp
+         DecisionPrint.cpp
+         DecisionNothingPressed.cpp
+         DecisionButtonPressed.cpp
+         AU.cpp
+         Astar.cpp
+         Application2D.cpp
+         Generating Code...
+         Compiling...
+         AiBehhaviour.cpp
+     1>c:\users\liam\desktop\ai_stoof\bootstrap\project2d\compositenode.h(15): warning C4018: '<': signed/unsigned mismatch
+     1>c:\users\liam\desktop\ai_stoof\bootstrap\project2d\selecter].h(29): warning C4018: '<': signed/unsigned mismatch
+     1>c:\users\liam\desktop\ai_stoof\bootstrap\project2d\sequence.h(13): warning C4018: '<': signed/unsigned mismatch
+         AI3.cpp
+         AI2.cpp
+         Generating Code...
+       ResourceCompile:
+         C:\Program Files (x86)\Windows Kits\8.1\bin\x86\rc.exe /D _UNICODE /D UNICODE /l"0x0409" /nologo /fo"C:\Users\liam\Desktop\ai_Stoof\bootstrap\temp\Project2D\Debug\Project2D.res" Project2D.rc 
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\liam\Desktop\ai_Stoof\bootstrap\temp\Project2D\Debug\Project2D.exe" /INCREMENTAL /NOLOGO /LIBPATH:C:\Users\liam\Desktop\ai_Stoof\bootstrap\Project2D\lib bootstrap.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib MathLib.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"C:\Users\liam\Desktop\ai_Stoof\bootstrap\temp\Project2D\Debug\Project2D.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\liam\Desktop\ai_Stoof\bootstrap\temp\Project2D\Debug\Project2D.lib" /MACHINE:X86 C:\Users\liam\Desktop\ai_Stoof\bootstrap\temp\Project2D\Debug\Project2D.res
+         C:\Users\liam\Desktop\ai_Stoof\bootstrap\temp\Project2D\Debug\AI2.obj
+         C:\Users\liam\Desktop\ai_Stoof\bootstrap\temp\Project2D\Debug\AI3.obj
+         C:\Users\liam\Desktop\ai_Stoof\bootstrap\temp\Project2D\Debug\AiBehhaviour.obj
+         C:\Users\liam\Desktop\ai_Stoof\bootstrap\temp\Project2D\Debug\Application2D.obj
+         C:\Users\liam\Desktop\ai_Stoof\bootstrap\temp\Project2D\Debug\Astar.obj
+         C:\Users\liam\Desktop\ai_Stoof\bootstrap\temp\Project2D\Debug\AU.obj
+         C:\Users\liam\Desktop\ai_Stoof\bootstrap\temp\Project2D\Debug\DecisionButtonPressed.obj
+         C:\Users\liam\Desktop\ai_Stoof\bootstrap\temp\Project2D\Debug\DecisionNothingPressed.obj
+         C:\Users\liam\Desktop\ai_Stoof\bootstrap\temp\Project2D\Debug\DecisionPrint.obj
+         C:\Users\liam\Desktop\ai_Stoof\bootstrap\temp\Project2D\Debug\DecisionTree.obj
+         C:\Users\liam\Desktop\ai_Stoof\bootstrap\temp\Project2D\Debug\entity.obj
+         C:\Users\liam\Desktop\ai_Stoof\bootstrap\temp\Project2D\Debug\flee.obj
+         C:\Users\liam\Desktop\ai_Stoof\bootstrap\temp\Project2D\Debug\main.obj
+         C:\Users\liam\Desktop\ai_Stoof\bootstrap\temp\Project2D\Debug\Player.obj
+         C:\Users\liam\Desktop\ai_Stoof\bootstrap\temp\Project2D\Debug\player2.obj
+         C:\Users\liam\Desktop\ai_Stoof\bootstrap\temp\Project2D\Debug\Pursue.obj
+         C:\Users\liam\Desktop\ai_Stoof\bootstrap\temp\Project2D\Debug\seek.obj
+         C:\Users\liam\Desktop\ai_Stoof\bootstrap\temp\Project2D\Debug\State.obj
+         C:\Users\liam\Desktop\ai_Stoof\bootstrap\temp\Project2D\Debug\stateMachine.obj
+         C:\Users\liam\Desktop\ai_Stoof\bootstrap\temp\Project2D\Debug\StateMove.obj
+         C:\Users\liam\Desktop\ai_Stoof\bootstrap\temp\Project2D\Debug\StatePursue.obj
+         C:\Users\liam\Desktop\ai_Stoof\bootstrap\temp\Project2D\Debug\StateWonder.obj
+         C:\Users\liam\Desktop\ai_Stoof\bootstrap\temp\Project2D\Debug\Wonder.obj
+     1>LINK : warning LNK4098: defaultlib 'MSVCRT' conflicts with use of other libs; use /NODEFAULTLIB:library
+     1>MathLib.lib(Vector2.obj) : warning LNK4099: PDB 'MathLib.pdb' was not found with 'MathLib.lib(Vector2.obj)' or at 'C:\Users\liam\Desktop\ai_Stoof\bootstrap\temp\Project2D\Debug\MathLib.pdb'; linking object as if no debug info
+         Project2D.vcxproj -> C:\Users\liam\Desktop\ai_Stoof\bootstrap\temp\Project2D\Debug\Project2D.exe
+     1>Done Building Project "C:\Users\liam\Desktop\ai_Stoof\bootstrap\Project2D\Project2D.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:04.07

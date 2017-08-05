@@ -5,6 +5,11 @@
 struct GridNode : public AStarNode
 {
 public:
+
+	/*
+		gridnode constructor
+		sets every variable made in gridenode
+	*/
 	GridNode(Vector2 pos,int index, int nIndexX, int nIndexY):AStarNode(index)
 	{
 		m_vectorPos = pos;

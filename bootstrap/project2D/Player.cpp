@@ -2,6 +2,14 @@
 #include "Defines.h"
 
 
+/*
+	player constructor
+	sets m_ppGrid to pGrid
+	creates a new astar node
+	GRIDSIZE in defines
+	setts next node
+	sets the going back variable to flase untill it is needed later on
+*/
 Player::Player(GridNode** pGrid)
 {
 	m_ppGrid = pGrid;
@@ -12,12 +20,25 @@ Player::Player(GridNode** pGrid)
 }
 
 
+/*
+	destructor
+	deletes the astar made in the constructor
+*/
 Player::~Player()
 {
 	delete m_pAstar;
 }
 
+/*
+	update function
+	calls the calculate function and sets the path to find
 
+	when reaches end of path sets going back function to true
+	when going back is true the node starts going in the oposite direction
+
+	untill it reaches the first node which sets going back to false
+	it continues to do this over and over
+*/
 void Player::Update(float fDeltaTime)
 {
 	m_Path.clear();
@@ -51,6 +72,12 @@ void Player::Update(float fDeltaTime)
 		}
 	}
 }
+
+/*
+	draw function
+	draws the nodes path
+	draws the node
+*/
 void Player::Draw(Renderer2D* m_pRender)
 {
 	for (size_t i = 0; i < m_Path.Size(); ++i)

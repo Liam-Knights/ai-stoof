@@ -1,5 +1,41 @@
-﻿libsndfile-1.lib(libsndfile-1.dll) : warning LNK4006: __NULL_IMPORT_DESCRIPTOR already defined in opengl32.lib(OPENGL32.dll); second definition ignored
-libsndfile-1.lib(libsndfile-1.dll) : warning LNK4221: This object file does not define any previously undefined public symbols, so it will not be used by any link operation that consumes this library
-OpenAL32.lib(OpenAL32.dll) : warning LNK4006: __NULL_IMPORT_DESCRIPTOR already defined in opengl32.lib(OPENGL32.dll); second definition ignored
-OpenAL32.lib(OpenAL32.dll) : warning LNK4221: This object file does not define any previously undefined public symbols, so it will not be used by any link operation that consumes this library
-  Bootstrap.vcxproj -> C:\Users\s171162\Desktop\ai stoof\bootstrap\temp\Bootstrap\Debug\Bootstrap.lib
+﻿Build started 05/08/17 9:29:10 PM.
+     1>Project "C:\Users\liam\Desktop\ai_Stoof\bootstrap\bootstrap\Bootstrap.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"C:\Users\liam\Desktop\ai_Stoof\bootstrap\temp\Bootstrap\Debug\\" /Fd"C:\Users\liam\Desktop\ai_Stoof\bootstrap\temp\Bootstrap\Debug\Bootstrap.pdb" /Gd /TP /analyze- /errorReport:prompt ..\dependencies\imgui\imgui.cpp ..\dependencies\imgui\imgui_draw.cpp Application.cpp Audio.cpp Font.cpp Gizmos.cpp imgui_glfw3.cpp Input.cpp Renderer2D.cpp SoundManager.cpp Texture.cpp
+         Texture.cpp
+         SoundManager.cpp
+         Renderer2D.cpp
+         Input.cpp
+         imgui_glfw3.cpp
+         Gizmos.cpp
+         Font.cpp
+         Audio.cpp
+         Application.cpp
+         imgui_draw.cpp
+         imgui.cpp
+         Generating Code...
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"C:\Users\liam\Desktop\ai_Stoof\bootstrap\temp\Bootstrap\Debug\\" /Fd"C:\Users\liam\Desktop\ai_Stoof\bootstrap\temp\Bootstrap\Debug\Bootstrap.pdb" /Gd /TC /analyze- /errorReport:prompt gl_core_4_4.c
+         gl_core_4_4.c
+       Lib:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\Lib.exe /OUT:"C:\Users\liam\Desktop\ai_Stoof\bootstrap\temp\Bootstrap\Debug\Bootstrap.lib" opengl32.lib "libsndfile-1.lib" OpenAL32.lib glfw3.lib /NOLOGO C:\Users\liam\Desktop\ai_Stoof\bootstrap\temp\Bootstrap\Debug\imgui.obj
+         C:\Users\liam\Desktop\ai_Stoof\bootstrap\temp\Bootstrap\Debug\imgui_draw.obj
+         C:\Users\liam\Desktop\ai_Stoof\bootstrap\temp\Bootstrap\Debug\Application.obj
+         C:\Users\liam\Desktop\ai_Stoof\bootstrap\temp\Bootstrap\Debug\Audio.obj
+         C:\Users\liam\Desktop\ai_Stoof\bootstrap\temp\Bootstrap\Debug\Font.obj
+         C:\Users\liam\Desktop\ai_Stoof\bootstrap\temp\Bootstrap\Debug\Gizmos.obj
+         C:\Users\liam\Desktop\ai_Stoof\bootstrap\temp\Bootstrap\Debug\gl_core_4_4.obj
+         C:\Users\liam\Desktop\ai_Stoof\bootstrap\temp\Bootstrap\Debug\imgui_glfw3.obj
+         C:\Users\liam\Desktop\ai_Stoof\bootstrap\temp\Bootstrap\Debug\Input.obj
+         C:\Users\liam\Desktop\ai_Stoof\bootstrap\temp\Bootstrap\Debug\Renderer2D.obj
+         C:\Users\liam\Desktop\ai_Stoof\bootstrap\temp\Bootstrap\Debug\SoundManager.obj
+         C:\Users\liam\Desktop\ai_Stoof\bootstrap\temp\Bootstrap\Debug\Texture.obj
+     1>libsndfile-1.lib(libsndfile-1.dll) : warning LNK4006: __NULL_IMPORT_DESCRIPTOR already defined in opengl32.lib(OPENGL32.dll); second definition ignored
+     1>libsndfile-1.lib(libsndfile-1.dll) : warning LNK4221: This object file does not define any previously undefined public symbols, so it will not be used by any link operation that consumes this library
+     1>OpenAL32.lib(OpenAL32.dll) : warning LNK4006: __NULL_IMPORT_DESCRIPTOR already defined in opengl32.lib(OPENGL32.dll); second definition ignored
+     1>OpenAL32.lib(OpenAL32.dll) : warning LNK4221: This object file does not define any previously undefined public symbols, so it will not be used by any link operation that consumes this library
+         Bootstrap.vcxproj -> C:\Users\liam\Desktop\ai_Stoof\bootstrap\temp\Bootstrap\Debug\Bootstrap.lib
+     1>Done Building Project "C:\Users\liam\Desktop\ai_Stoof\bootstrap\bootstrap\Bootstrap.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:12.89

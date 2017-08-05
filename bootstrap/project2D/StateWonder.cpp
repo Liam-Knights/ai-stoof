@@ -2,13 +2,20 @@
 #include "Wonder.h"
 #include "Agent.h"
 
-
+/*
+	should probably be named stateWander
+	constructor for state wonder
+	pushes the wonder state
+*/
 StateWonder::StateWonder()
 {
 	m_pBehaviourList.pushBack(new Wonder(1.00f));
 }
 
-
+/*
+	destructor for state wonder
+	for loop that deletes all the new wonders that get created
+*/
 StateWonder::~StateWonder()
 {
 	for (unsigned int i = 0; i < m_pBehaviourList.Size(); ++i)
@@ -23,7 +30,11 @@ void StateWonder::OnEnter(StateMachine* pMachine)
 
 }
 
-//on update
+/*
+	on update function
+	this decides both the speed and velocity
+	it then sets the position of the wandering agent
+*/
 void StateWonder::OnUpdate(float fDeltaTime, StateMachine* pMachine, Agent* pAgent)
 
 {

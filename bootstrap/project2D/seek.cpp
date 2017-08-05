@@ -4,15 +4,28 @@
 
 using namespace aie;
 
+/*
+	constructor for seek class
+	basically here for fWeighting
+*/
 seek::seek(float fWeighting) : IBehaviour(fWeighting)
 {
 }
 
-
+/*
+	destructor
+	defualt
+*/
 seek::~seek()
 {
 }
 
+/*
+	calculate for seek
+	gets the mouse position
+	calculates the direction and velocity
+	then returns velocity
+*/
 Vector2 seek::calculate(Agent* pAgent, float fDeltaTime)
 {
 	int nMouseX;

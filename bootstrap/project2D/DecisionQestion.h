@@ -4,6 +4,11 @@
 class DecisionQuestion : public BaseDecision
 {
 public:
+
+	/*
+		decision making function
+		virtual
+	*/
 	virtual void DecisionMaking(entity* pEntity, float fDeltaTime) = 0;
 
 

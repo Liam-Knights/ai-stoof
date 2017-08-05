@@ -5,6 +5,15 @@
 #include "ExampleAction.h"
 #include "ExampleQuestion.h"
 
+
+/*
+	Ai Behhaviour constructor
+	creates new selecter
+	creates two new sequence files
+	creates new example action
+	creates new example question
+	pushes them all in certain order
+*/
 AiBehhaviour::AiBehhaviour()
 {
 
@@ -24,12 +33,19 @@ AiBehhaviour::AiBehhaviour()
 	((ComppositeNode*)pFirst)->children.pushBack(pSecondSecond);
 }
 
-
+/*
+	Ai Behhaviour destructor
+	deletes the selecter
+*/
 AiBehhaviour::~AiBehhaviour()
 {
 	delete m_pRoot;
 }
 
+/*
+	ai behhaviour update
+	calls execute
+*/
 void AiBehhaviour::Update(float fDeltaTIme)
 {
 	m_pRoot->Execute();

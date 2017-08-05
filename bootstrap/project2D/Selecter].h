@@ -1,12 +1,20 @@
 #pragma once
 #include "CompositeNode.h"
 
+
+
 class Selecter : public ComppositeNode
 {
+	/*
+		execute function
+		for loop that goes through the amount of children behavenode
+		and returns diferent results depending on the outcome of execute used in diferent classes
+		EBHAVIOUR IN behave result located in behave node
+	*/ 
 	BehaveiourResult Execute()
 	{
-
-
+		
+		
 
 
 		BehaveNode* child = m_PendingNode;
